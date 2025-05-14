@@ -1,0 +1,100 @@
+/* Hero Section */
+.hero {
+    background-image: url('image/pexels-craytive-1456706.jpg'); /* Hero image URL */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  /* Product Cards */
+  .product-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+  
+  /* Testimonials Section */
+  .testimonial {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .testimonial h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+  }
+  
+  .testimonial .col-md-4 {
+    margin-bottom: 20px;
+  }
+  
+  .testimonial .col-md-4 p {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  footer a:hover {
+    color: #007bff;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  

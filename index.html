@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakStore - Shoe Landing Page</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <!-- Bootstrap 5 CDN (Add in <head> if not already included) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Header / Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+            <a class="navbar-brand fw-bold" href="index.html">SneakStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+                </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+                <!-- Buttons -->
+                <!-- <button class="btn btn-outline-light me-2"> Login</button> -->
+                <a class="btn btn-outline-light me-2" href="signup.html/dist/index.html">Login</a>
+                <!-- <button class="btn btn-warning">Cart <span class="badge bg-dark text-light">0</span></button> -->
+                <a href="cart.html" class="btn btn-warning">View Cart</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Section -->
+    <section class="hero">
+<div data-aos="zoom-in-up">
+    <h1 data-aos="zoom-in-up">buy your <span class="text-danger">styles</span> sneakers</h1>
+</div>
+    </section>
+    <section id="products" class=" container my-5">
+        <h2 class="text-center mb-4">Our Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-desertedinurban-4462781.jpg" class="card-img-top" alt="Shoe 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 1</h5>
+                        <p class="card-text">$50</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 1" data-price="50"
+                            data-image="image/pexels-desertedinurban-4462781.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-mnzoutfits-1598505.jpg" class="card-img-top" alt="Shoe 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 2</h5>
+                        <p class="card-text">$60</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 2" data-price="50"
+                            data-image="image/pexels-mnzoutfits-1598505.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-wendelmoretti-1972115.jpg" class="card-img-top" alt="Shoe 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 3</h5>
+                        <p class="card-text">$70</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 3" data-price="50"
+                            data-image="image/pexels-melvin-buezo-1253763-2529148.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="container my-5">
+        <!-- <h2 class="text-center mb-4">Our Featured Products</h2> -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-amanjakhar-2048547.jpg" class="card-img-top" alt="Shoe 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 4</h5>
+                        <p class="card-text">$50</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 4" data-price="50"
+                            data-image="image/pexels-amanjakhar-2048547.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-micaasato-1580267.jpg" class="card-img-top" alt="Shoe 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 5</h5>
+                        <p class="card-text">$60</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 5" data-price="50"
+                            data-image="image/pexels-micaasato-1580267.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-suraj-b-1429549-2759779.jpg" class="card-img-top" alt="Shoe 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 6</h5>
+                        <p class="card-text">$70</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 6" data-price="50"
+                            data-image="image/pexels-suraj-b-1429549-2759779.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="container my-5">
+        <!-- <h2 class="text-center mb-4">Our Featured Products</h2> -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-hazardos-1306248.jpg" class="card-img-top" alt="Shoe 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 7</h5>
+                        <p class="card-text">$50</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 7" data-price="50"
+                            data-image="image/pexels-hazardos-1306248.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-bellazhong-1522381.jpg" class="card-img-top" alt="Shoe 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 8</h5>
+                        <p class="card-text">$60</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 8" data-price="50"
+                            data-image="image/pexels-bellazhong-1522381.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="image/pexels-apostolosv-2946956.jpg" class="card-img-top" alt="Shoe 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker 9</h5>
+                        <p class="card-text">$70</p>
+                        <a href="#" class="btn btn-success add-to-cart" data-name="Sneaker 9" data-price="50"
+                            data-image="image/pexels-apostolosv-2946956.jpg">
+                            Add to Cart
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function updateCart(product, price, image) {
+            cart.push({ product, price, image });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${product} added to cart!`);
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                const name = this.getAttribute('data-name');
+                const price = this.getAttribute('data-price');
+                const image = this.getAttribute('data-image');
+                updateCart(name, price, image);
+            });
+        });
+    </script>
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">SneakStore</h5>
+                    <p>Premium sneakers curated just for your style. Shop with confidence and comfort.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                    <p><a href="#products" class="text-white" style="text-decoration: none;">Sneakers</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Offers</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">New Arrivals</a></p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Your Account</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Cart</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home mr-3"></i> New Delhi, India</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@sneakstore.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +91 9876543210</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 SneakStore — All rights reserved.</p>
+                </div>
+
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+      </script>
+
+
+</body>
+
+</html>

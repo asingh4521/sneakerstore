@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - SneakStore</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+            <a class="navbar-brand fw-bold" href="#">SneakStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+                </ul>
+                <a href="index.html" class="btn btn-warning">Continue Shopping</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Your Cart</h2>
+        <div id="cart-items" class="row">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="text-right">
+            <h3>Total: $<span id="total-price">0</span></h3>
+            <button class="btn btn-success mt-3">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 SneakStore | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Retrieve cart items from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear previous content
+            let total = 0;
+
+            // Loop through cart and create the item elements
+            cart.forEach((item, index) => {
+                const cartItemElement = document.createElement('div');
+                cartItemElement.classList.add('col-md-4', 'mb-4');
+
+                cartItemElement.innerHTML = `
+                    <div class="card">
+                        <img src="${item.image}" class="card-img-top" alt="${item.product}">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.product}</h5>
+                            <p class="card-text">$${item.price}</p>
+                            <button class="btn btn-danger" onclick="removeItem(${index})">Remove</button>
+                        </div>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItemElement);
+                total += item.price;
+            });
+
+            // Update total price
+            document.getElementById('total-price').innerText = total;
+        }
+
+        function removeItem(index) {
+            // Remove item from cart array
+            cart.splice(index, 1);
+            // Update localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // Update cart display
+            updateCart();
+        }
+
+        // Initial cart update
+        updateCart();
+    </script>
+    <footer id="footer" class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">SneakStore</h5>
+                    <p>Premium sneakers curated just for your style. Shop with confidence and comfort.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                    <p><a href="#products" class="text-white" style="text-decoration: none;">Sneakers</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Offers</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">New Arrivals</a></p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Your Account</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Cart</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home mr-3"></i> New Delhi, India</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@sneakstore.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +91 9876543210</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 SneakStore — All rights reserved.</p>
+                </div>
+
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
